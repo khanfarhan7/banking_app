@@ -9,9 +9,9 @@ public class atm {
 
 		Scanner sc = new Scanner(System.in);
 
-		int acctType = sc.nextInt();
+		int selection = sc.nextInt();
 
-		switch (acctType) {
+		switch (selection) {
 
 		case 1:
 

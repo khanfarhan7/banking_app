@@ -1,7 +1,8 @@
 import java.util.Scanner;
 
-public class atm {
+public class Atm {
 
+	
 	public static void main(String[] args) {
 
 		System.out.println(
@@ -14,15 +15,26 @@ public class atm {
 		switch (selection) {
 
 		case 1:
+			
 
 			System.out.println("Checking account selected. Press 1 to deposit or press 2 to withdraw");
 
 			int input = sc.nextInt();
 
 			if (input == 1) {
-				System.out.println("User has chosen deposit into their checking account");
+				Account account = new Account("checking", 0);
+				System.out.println("How much do you want to deposit");
+				double dep = sc.nextDouble();
+				account.deposit(dep);
+				System.out.println("Your new account balance is: " + account.getBalance());
+				
 			} else if (input == 2) {
-				System.out.println("User has chosen to withdraw from their checking account");
+				Account account = new Account ("checking", 0);
+				System.out.println("How much do you want to withdraw");
+				double dep = sc.nextDouble();
+				account.withdraw(dep);
+				System.out.println("Your new account balance is: " + account.getBalance());
+				
 			}
 
 			else {
@@ -38,9 +50,20 @@ public class atm {
 			int input1 = sc.nextInt();
 
 			if (input1 == 1) {
-				System.out.println("User has chosen to deposit into their savings account");
+				Account account = new Account("savings", 0);
+				System.out.println("How much do you want to deposit");
+				double dep = sc.nextDouble();
+				account.deposit(dep);
+				System.out.println("Your new account balance is: " + account.getBalance());
+				
+				
+				
 			} else if (input1 == 2) {
-				System.out.println("User has chosen to withdraw from their savings account");
+				Account account = new Account ("savings", 0);
+				System.out.println("How much do you want to withdraw");
+				double dep = sc.nextDouble();
+				account.withdraw(dep);
+				System.out.println("Your new account balance is: " + account.getBalance());
 			}
 
 			else {
@@ -52,6 +75,10 @@ public class atm {
 		case 3:
 
 			System.out.println("Invalid option selected");
+			break;
+			
+		case 4 :
+			System.out.println("Main menu:\n");
 			break;
 
 		}

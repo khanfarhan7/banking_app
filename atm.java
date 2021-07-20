@@ -78,7 +78,7 @@ public class Atm {
 
 			}
 		}
-		System.out.println("Program Ended");
+		System.out.println("Program Ended!");
 		
 		sc.close();
 	}
